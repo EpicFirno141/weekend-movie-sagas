@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 function MovieItem({movie}) {
     return(
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 345 }} elevation={3} >
             <CardMedia
                 sx={{ height: 140 }}
                 image={movie.poster}

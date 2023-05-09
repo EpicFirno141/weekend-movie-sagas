@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import './MovieList.css'
 import MovieItem from './MovieItem';
+import Paper from '@mui/material/Paper';
 
 function MovieList() {
 
@@ -17,7 +18,10 @@ function MovieList() {
     return (
         <main>
             <section className="movies">
-                <Box component="span" sx={{ p: 2, border: '1px solid lightgrey', backgroundColor: 'lightgray' }}>
+                <Box component="span" sx={{ p: 2 }}>
+                    <Paper sx={{ mx: 48, my: 2, p: 4, width: 'auto', fontSize: 32 }} elevation={3}>
+                        Movie List
+                    </Paper>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {movies.map(movie => {
                             return (
