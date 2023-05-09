@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import MovieItem from './MovieItem';
-import Paper from '@mui/material/Paper';
 
 function MovieList() {
 

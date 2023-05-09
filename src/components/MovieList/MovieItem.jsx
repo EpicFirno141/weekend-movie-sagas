@@ -10,7 +10,6 @@ function MovieItem({movie}) {
     const history = useHistory();
 
     const checkDetails = () => {
-        console.log('Moving to details...');
         history.push(`/details/${movie.id}`);
     }
 

@@ -12,18 +12,14 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
 function Details() {
+    
     const params = useParams();
+
     const dispatch = useDispatch();
     const history = useHistory();
     const movie = useSelector(store => store.currentMovie)
 
-    const backButton = () => {
-        console.log('test back');
-        history.push('/');
-    }
-
     useEffect(() => {
-        console.log(params);
         dispatch({ type: 'FETCH_CURRENT_MOVIE', payload: { id: params.id }});
     }, [])
 
