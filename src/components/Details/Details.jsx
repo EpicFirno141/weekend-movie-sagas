@@ -12,7 +12,7 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
 function Details() {
-    
+    // This variable takes in the id from the page url
     const params = useParams();
 
     const dispatch = useDispatch();
@@ -20,6 +20,8 @@ function Details() {
     const movie = useSelector(store => store.currentMovie)
 
     useEffect(() => {
+        // This sends an action to redux which in turn
+        // returns movie data based on the id we got earlier
         dispatch({ type: 'FETCH_CURRENT_MOVIE', payload: { id: params.id }});
     }, [])
 
