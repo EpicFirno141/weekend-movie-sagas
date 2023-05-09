@@ -3,6 +3,7 @@
 ## Description
 
 _Duration: 2 Weeks_
+
 This site displays an assortment of movies gathered in the database. Upon entering the home page, all movies are shown. Upon clicking the details button on a movie, you will be brought to the details page for that movie. 
 
 This project uses many-to-many table relationships between genres and movies. All the server calls are made from inside redux-saga.
