@@ -11,6 +11,8 @@ import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
 
+// This reducer is for the data on the movie that we
+// want to see details about.
 const currentMovie = (state = {}, action) => {
     if (action.type === 'SET_CURRENT_MOVIE') {
         return action.payload[0];
@@ -24,6 +26,7 @@ function* rootSaga() {
     yield takeEvery('FETCH_CURRENT_MOVIE', fetchMovie);
 }
 
+// Fetches data from the database through the newly created get request (that specifies an id)
 function* fetchMovie(action) {
     try {
         const movieData = yield axios.get(`/api/movie/${action.payload.id}`);

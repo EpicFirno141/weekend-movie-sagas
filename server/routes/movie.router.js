@@ -16,6 +16,9 @@ router.get('/', (req, res) => {
 
 });
 
+// This route returns a joined table from postgres. The genres are combined together in
+// a string by using string_agg. Then we also take in an id and only return data matching 
+// that movie's id
 router.get('/:id', (req, res) => {
   const query = `SELECT movies.id, movies.title, movies.description, movies.poster, 
   string_agg(genres.name, ', ') AS genres   
