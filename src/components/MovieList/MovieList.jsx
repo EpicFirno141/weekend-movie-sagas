@@ -18,10 +18,7 @@ function MovieList() {
     return (
         <main>
             <section className="movies">
-                <Box component="span" sx={{ p: 2 }}>
-                    <Paper sx={{ mx: 48, my: 2, p: 4, width: 'auto', fontSize: 32 }} elevation={3}>
-                        Movie List
-                    </Paper>
+                <Box component="span" sx={{ p: 2, backgroundColor: '#bae4e5' }}>
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                         {movies.map(movie => {
                             return (

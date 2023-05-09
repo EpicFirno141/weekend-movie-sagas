@@ -1,7 +1,7 @@
 import {HashRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import MovieList from '../MovieList/MovieList'
-import AppBarMenu from '../AppBar/AppBar';
+import Header from '../Header/Header';
 import { useSelector } from 'react-redux';
 import Details from '../Details/Details';
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppBarMenu />
+      <Header />
       <Router>        
         <Route exact path="/" >
           <MovieList />
