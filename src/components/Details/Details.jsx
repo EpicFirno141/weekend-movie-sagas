@@ -28,7 +28,7 @@ function Details() {
     }, [])
 
     return(
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, backgroundColor: '#FFE0B2', p: 2 }}>
             <Grid container spacing={2}>
                 <Grid item xs={3}>
                     <Card sx={{ mt: 5, ml: 5 }} elevation={3}>

@@ -16,24 +16,20 @@ function MovieList() {
     }, []);
 
     return (
-        <main>
-            <section className="movies">
-                <Box component="span" sx={{ p: 2, backgroundColor: '#bae4e5' }}>
-                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-                        {movies.map(movie => {
-                            return (
-                                <Grid item xs={3}>
-                                    <MovieItem 
-                                        key={movie.id}
-                                        movie = {movie}
-                                    />
-                                </Grid>
-                            );
-                        })}
-                    </Grid>
-                </Box>
-            </section>
-        </main>
+        <Box sx={{ p: 2, backgroundColor: '#B2EBF2' }}>
+            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                {movies.map(movie => {
+                    return (
+                        <Grid item xs={3}>
+                            <MovieItem 
+                                key={movie.id}
+                                movie = {movie}
+                            />
+                        </Grid>
+                    );
+                })}
+            </Grid>
+        </Box>
 
     );
 }
